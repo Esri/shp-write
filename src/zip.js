@@ -51,9 +51,5 @@ module.exports = function(gj, options) {
         type: (options && options.type) || 'base64'
     };
 
-    if (!process.browser) {
-      generateOptions.type = 'nodebuffer';
-    }
-
     return zip.generateAsync(generateOptions);
 };
